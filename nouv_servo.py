@@ -3,17 +3,20 @@ from time import sleep
 # definitions des broches
 bras_servo_pin = 13
 pince_servo_pin = 15
-
+baiser_servo_pin = 12
 bras_servo = Servo(bras_servo_pin)
 pince_servo = Servo(pince_servo_pin)
+baiser_servo = Servo(baiser_servo_pin)
 def lever_bras():
     print("lever bras")
     bras_servo.value = 0.5
+
     sleep(1)
     bras_servo.value=0.0
 def baisser_bras():
     print('baisser')
     bras_servo.value = - 0.5
+    baiser_servo.value = - 0.5
     sleep(1)
     bras_servo.value=0.0
 def prendre_boite():
@@ -23,6 +26,7 @@ def prendre_boite():
     pince_servo.value = 0.0
 def deposer_boite():
     print('deposer')
+    baiser_servo.value =  0.5
     pince_servo.value=1.0
     sleep(1)
     pince_servo.value = 0.0
