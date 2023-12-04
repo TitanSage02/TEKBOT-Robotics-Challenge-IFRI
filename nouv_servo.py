@@ -44,6 +44,7 @@ except :
 finally:
     bras_servo.value = 0.0
     pince_servo.value = 0.0
+    baiser_servo.value = 0.0
 
 
 
