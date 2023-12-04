@@ -1,3 +1,5 @@
+#Ce code a été testé sur le robot et validé 
+
 import RPi.GPIO as GPIO
 import time
 
