@@ -1,3 +1,3 @@
-opencv-python
+Picamera
 RPi.GPIO
 adafruit-circuitpython-pca9685
