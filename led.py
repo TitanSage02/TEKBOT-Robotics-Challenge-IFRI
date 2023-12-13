@@ -1,7 +1,7 @@
 import time
 from rpi_ws281x import *
 
-LED_COUNT = 16       # Nombre de pixels LED.
+LED_COUNT = 12       # Nombre de pixels LED.
 LED_PIN = 12         # Broche GPIO connectée aux pixels (18 utilise PWM!).
 LED_FREQ_HZ = 800000 # Fréquence du signal LED en hertz (généralement 800khz)
 LED_DMA = 10         # Canal DMA à utiliser pour générer le signal (essayez 10)
@@ -24,10 +24,10 @@ led = LED()
 try:
     while True:
         led.colorWipe(255, 0, 0)  # Rouge
-        time.sleep(1)
+        time.sleep(0.5)
         led.colorWipe(0, 255, 0)  # Vert
-        time.sleep(1)
+        time.sleep(0.5)
         led.colorWipe(0, 0, 255)  # Bleu
-        time.sleep(1)
+        time.sleep(0.5)
 except KeyboardInterrupt:
     led.colorWipe(0, 0, 0)  # Extinction des lumières
